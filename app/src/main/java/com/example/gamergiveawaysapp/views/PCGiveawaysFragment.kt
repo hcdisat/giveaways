@@ -12,6 +12,7 @@ import com.example.gamergiveawaysapp.adapter.GiveawayAdapter
 import com.example.gamergiveawaysapp.databinding.FragmentPCGiveawaysBinding
 import com.example.gamergiveawaysapp.model.Giveaways
 import com.example.gamergiveawaysapp.utils.GiveawayState
+import com.example.gamergiveawaysapp.utils.PlatformType
 
 class PCGiveawaysFragment : BaseFragment() {
 
@@ -22,7 +23,7 @@ class PCGiveawaysFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
 
         binding.pcGiveawaysRv.apply {

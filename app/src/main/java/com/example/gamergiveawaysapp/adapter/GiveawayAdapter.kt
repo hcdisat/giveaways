@@ -8,7 +8,8 @@ import com.example.gamergiveawaysapp.model.Giveaways
 import com.squareup.picasso.Picasso
 
 class GiveawayAdapter(
-    private val giveaways: MutableList<Giveaways> = mutableListOf()
+    private val giveaways: MutableList<Giveaways> = mutableListOf(),
+    private val onGameClick: (giveaways: Giveaways) -> Unit
 ) : RecyclerView.Adapter<GiveAwayViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GiveAwayViewHolder {
@@ -17,7 +18,8 @@ class GiveawayAdapter(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ),
+            onGameClick
         )
     }
 
@@ -34,7 +36,8 @@ class GiveawayAdapter(
 }
 
 class GiveAwayViewHolder(
-    private val binding: GiveawayItemBinding
+    private val binding: GiveawayItemBinding,
+    private val onGameClick: (giveaways: Giveaways) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(giveaways: Giveaways) {
@@ -47,6 +50,10 @@ class GiveAwayViewHolder(
         Picasso.get()
             .load(giveaways.image)
             .into(binding.giveawayImage)
+
+        binding.root.setOnClickListener {
+            onGameClick(giveaways)
+        }
     }
 
 }

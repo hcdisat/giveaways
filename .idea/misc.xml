@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.3729166666666667" />
         <entry key="app/src/main/res/layout/fragment_giveaways.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/fragment_p_c_giveaways.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_p_c_giveaways.xml" value="0.14532019704433496" />
+        <entry key="app/src/main/res/layout/fragment_ps4_giveaways.xml" value="0.1" />
         <entry key="app/src/main/res/layout/giveaway_item.xml" value="0.7413130809195899" />
       </map>
     </option>

@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_GiveawaysFragment_to_PCgiveaways"
             app:destination="@id/PCgiveaways" />
+        <action
+            android:id="@+id/action_GiveawaysFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
     <fragment
@@ -27,6 +30,9 @@
         android:name="com.example.gamergiveawaysapp.views.PCGiveawaysFragment">
 
 
+        <action
+            android:id="@+id/action_PCgiveaways_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
     <fragment
@@ -36,6 +42,15 @@
         android:name="com.example.gamergiveawaysapp.views.Ps4GiveawaysFragment">
 
 
+        <action
+            android:id="@+id/action_PS4Giveaways_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.gamergiveawaysapp.views.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
 
 </navigation>

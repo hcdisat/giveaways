@@ -25,6 +25,8 @@ class GiveawaysViewModel(
 
     var platform: PlatformType = PlatformType.ANDROID
 
+    lateinit var selectedGiveaway: Giveaways
+
     private val _sortedGiveaways: MutableLiveData<GiveawayState> = MutableLiveData(GiveawayState.LOADING)
     val giveaways: LiveData<GiveawayState> get() = _sortedGiveaways
 
@@ -72,10 +74,6 @@ class GiveawaysViewModel(
             } catch (e: Exception) {
                 _sortedGiveaways.postValue(GiveawayState.ERROR(e))
             }
-        }
-
-        viewModelScope.async {
-
         }
     }
 
